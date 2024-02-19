@@ -44,6 +44,24 @@ public class Solution
 		            }	           
 		       }
 	       return res;
+
+
+		//SAME AS ABOVE BUT MUCH SIMPLER TO READ AND UNDERSTAND
+		/*
+  		 int[] res= new int[2];
+	         Map<Integer,Integer> hm=new HashMap<Integer,Integer>();
+		   for(int i=0;i<nums.length;i++)
+		    {
+		        if(hm.containsKey(target - nums[i]))
+	                {
+		           res[0] = hm.get(target - nums[i]);
+		           res[1] = i;  
+		           break;	                    		                
+		        }
+                        hm.put(nums[i], i);                 
+		     }
+                    return res;
+		*/
 	}
 	
 	public static void main(String[] args)
