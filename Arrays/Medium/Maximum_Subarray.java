@@ -1,7 +1,7 @@
 
 public class Maximum_Subarray {
 
-	/*
+	/* O(n3)
 	 public static int maxSubArray(int[] nums)
 	 {	        
 	        int max_value=Integer.MIN_VALUE;
@@ -21,6 +21,26 @@ public class Maximum_Subarray {
 	  }
 	*/
 
+	
+	/* O(n2)
+	 public static int maxSubArray(int[] nums)
+	 {
+	        int max_value=Integer.MIN_VALUE;
+	        for(int s=0;s<nums.length;s++)
+	        {
+	        	int sum=0;
+	            for(int e=s;e<nums.length;e++)
+	            {
+	                sum=sum+nums[e];
+	             }
+	             max_value=Math.max(max_value,sum);
+	        }
+	        return max_value;
+	  }
+	  */
+
+	
+	
 	public static int maxSubArray(int[] nums)   //Kadane's Algorithm
 	{	
             
