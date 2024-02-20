@@ -5,6 +5,7 @@ public class Nearest_smallest_on_left {
 	public static void main(String[] args) {
 
 		int[] nums= {4,3,1,2,7,8};
+		//           0,0,0,1,2,7
 		int n=nums.length;
 		int[] res=new int[n];
 		
