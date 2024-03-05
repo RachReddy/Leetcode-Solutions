@@ -1,5 +1,3 @@
-package Stacks;
-
 public class Reverse_Rows_of_matrix {
 
 	public static void main(String[] args) {
