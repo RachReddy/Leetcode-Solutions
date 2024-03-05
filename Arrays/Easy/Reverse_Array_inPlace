@@ -1,0 +1,36 @@
+package Stacks;
+
+public class Reverse_Array_inPlace {
+
+	public static void main(String[] args) {
+		
+	        int[] arr= {1,2,3,4,5};
+		int n=arr.length;
+		
+		int s=0;
+		int e=n-1;
+		
+		while(s<e)
+		{
+			int temp=arr[s];
+			arr[s]=arr[e];
+			arr[e]=temp;
+			
+			s++;
+			e--;
+			
+		}
+		
+		for(int i=0;i<n;i++)
+		{
+			System.out.print(arr[i]+ " ,");  //5,4,3,2,1	
+		}
+		
+		
+		
+		
+		
+		
+	}
+
+}
