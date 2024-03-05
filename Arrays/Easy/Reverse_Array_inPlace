@@ -25,12 +25,7 @@ public class Reverse_Array_inPlace {
 		{
 			System.out.print(arr[i]+ " ,");  //5,4,3,2,1	
 		}
-		
-		
-		
-		
-		
+	
 		
 	}
-
 }
