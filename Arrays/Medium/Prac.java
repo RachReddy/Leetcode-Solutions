@@ -1,0 +1,57 @@
+import java.util.PriorityQueue;
+
+public class Prac {
+
+	public static void main(String[] args) {
+
+
+		int[] nums= {3,2,3,1,2,4,5,5,6};
+		int k=4;
+		
+		 /* B.F=> nlogn
+        Arrays.sort(nums);
+        int n=nums.length;
+        return nums[n-k];
+        */
+		
+		PriorityQueue pq=new PriorityQueue<>();
+		
+		for(int i=0;i<nums.length;i++)
+		{
+			pq.add(nums[i]);
+		}
+		
+		
+		//NOTE:PriorityQueue in Java doesn't guarantee the order when you print it directly. 
+		//If you want to print the elements of the priority queue in sorted order, you need to dequeue elements one by one.
+		
+		/*
+		for(int i=0;i<pq.size();i++)
+		{
+			System.out.print(pq);   //[1, 2, 3, 3, 2, 4, 5, 5, 6]
+		}
+		*/
+		
+		
+		// Dequeue and print the elements to get them in sorted order
+		
+	   /*
+        while (!pq.isEmpty()) {
+            System.out.print(pq.poll() + " ,");  //[1 ,2 ,2 ,3 ,3 ,4 ,5 ,5 ,6 ]
+        }
+       */  
+     
+        //-----------------------------------------------------------------------------------
+        
+		int n=nums.length;
+		int x=n-k;
+        while(!pq.isEmpty() && x>0)
+        {
+        	pq.poll();
+        	x--;
+        }
+        System.out.println(pq.peek());
+
+	}
+
+}
