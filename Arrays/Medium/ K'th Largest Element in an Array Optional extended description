@@ -1,14 +1,14 @@
 import java.util.PriorityQueue;
 
-public class Prac {
+public class Kth_Largest_ele_in_Array {
 
 	public static void main(String[] args) {
 
 
-		int[] nums= {3,2,3,1,2,4,5,5,6};
-		int k=4;
+	int[] nums= {3,2,3,1,2,4,5,5,6};
+	int k=4;
 		
-		 /* B.F=> nlogn
+	/* B.F=> nlogn
         Arrays.sort(nums);
         int n=nums.length;
         return nums[n-k];
@@ -20,8 +20,7 @@ public class Prac {
 		{
 			pq.add(nums[i]);
 		}
-		
-		
+	
 		//NOTE:PriorityQueue in Java doesn't guarantee the order when you print it directly. 
 		//If you want to print the elements of the priority queue in sorted order, you need to dequeue elements one by one.
 		
@@ -43,15 +42,14 @@ public class Prac {
      
         //-----------------------------------------------------------------------------------
         
-		int n=nums.length;
-		int x=n-k;
+	int n=nums.length;
+	int x=n-k;
         while(!pq.isEmpty() && x>0)
         {
         	pq.poll();
         	x--;
         }
         System.out.println(pq.peek());
-
 	}
 
 }
